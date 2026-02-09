@@ -49,3 +49,32 @@ Use a virtual environment.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+
+python -m pip install --upgrade pip
+python -m pip install beautifulsoup4 lxml openpyxl
+
+python clean_and_index.py guide.html output/guide.cleaned.html output/headings.xlsx https://docs.example.com/guide.html
+
+## Folder Structure
+
+inline-help-generator/
+├── clean_and_index.py
+├── guide.html
+├── output/
+│   ├── guide.cleaned.html
+│   ├── headings.xlsx
+│   └── headings.json
+└── .venv/
+
+### Create a Folder
+
+mkdir inline-help-generator
+cd inline-help-generator
+
+- Put your HTML file inside or Copy your Zendesk export here and name it:
+`guide.html`
+
+
+
+
+
