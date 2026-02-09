@@ -31,7 +31,6 @@ In the product UI:
 ### Output
 - `guide.cleaned.html`  
   Clean HTML with stable heading IDs and updated internal links
-
 - `headings.xlsx`  
   Excel index of headings and their full absolute paths
 
@@ -50,10 +49,10 @@ Use a virtual environment.
 python3 -m venv .venv
 source .venv/bin/activate
 
+### Install packages
+
 python -m pip install --upgrade pip
 python -m pip install beautifulsoup4 lxml openpyxl
-
-python clean_and_index.py guide.html output/guide.cleaned.html output/headings.xlsx https://docs.example.com/guide.html
 
 ## Folder Structure
 
@@ -74,7 +73,19 @@ cd inline-help-generator
 - Put your HTML file inside or Copy your Zendesk export here and name it:
 `guide.html`
 
+## Create Output folder
+mkdir output
 
+## Create the Python script file
+touch clean_and_index.py
+code clean_and_index.py
+
+# Run the script
+
+python clean_and_index.py guide.html output/guide.cleaned.html output/headings.xlsx https://docs.example.com/guide.html
+
+# Verify
+ls -la output
 
 
 
